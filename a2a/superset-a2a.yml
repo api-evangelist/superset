@@ -1,0 +1,35 @@
+generated: '2026-07-28'
+method: probed
+source: https://superset.sh/.well-known/agent-card.json
+description: 'A2A Agent Card observed at /.well-known/agent-card.json on superset.sh. Grade is measured
+  against the A2A 1.0.0 AgentCard object: ''conformant'' passes every structural check, ''near-conformant''
+  is correctly shaped but omits optional fields, ''flavored'' fails a hard check and is an agent card
+  in spirit rather than in schema. Provider-published by construction — served from the provider''s own
+  host; nothing here is derived or generated.'
+discovery:
+  path: /.well-known/agent-card.json
+  canonical: true
+  host: superset.sh
+conformance:
+  spec: A2A 1.0.0
+  grade: conformant
+  protocol_version: 0.3.0
+  preferred_transport: JSONRPC
+  deviations: []
+card:
+  name: Superset
+  description: Superset runs parallel AI coding agents in isolated Git worktrees. This service speaks
+    the Model Context Protocol (JSON-RPC over Streamable HTTP) rather than the A2A message protocol —
+    connect an MCP client to the URL below to create workspaces, launch coding agents, schedule automations,
+    and manage tasks on behalf of a Superset user.
+  url: https://api.superset.sh/api/v2/agent/mcp
+  version: 1.0.0
+  documentation_url: https://docs.superset.sh/mcp-server
+  skills: 4
+  file: superset-agent-card.json
+x-evidence:
+  fetched: '2026-07-28'
+  url: https://superset.sh/.well-known/agent-card.json
+  http_status: 200
+  content_type: application/json
+  note: Verbatim body saved alongside this manifest. No field inferred.
