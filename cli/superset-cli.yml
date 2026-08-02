@@ -1,0 +1,78 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.superset.sh/cli/cli-reference
+binary: superset
+install:
+  - method: homebrew
+    command: brew install superset-sh/tap/superset
+  - method: curl
+    command: curl -fsSL https://superset.sh/cli/install.sh | sh
+  - method: self-update
+    command: superset update
+    description: Downloads the matching superset-<platform>.tar.gz from GitHub Releases.
+output_formats:
+  - flag: --json
+    description: Raw structured JSON output.
+  - flag: --quiet
+    description: IDs only, one per line for arrays.
+  - flag: (default)
+    description: Human-readable table output.
+command_groups:
+  - group: auth
+    description: Authenticate the CLI.
+    commands:
+      - superset auth login
+      - superset auth logout
+      - superset auth whoami
+  - group: host
+    description: Manage the local host server daemon.
+    commands:
+      - superset start
+      - superset stop
+      - superset status
+      - superset update
+  - group: organization
+    description: Manage organizational context.
+    commands:
+      - superset organization list
+      - superset organization switch
+      - superset organization members
+  - group: projects
+    description: Register and configure repositories.
+    commands:
+      - superset projects list
+      - superset projects create
+      - superset projects setup
+  - group: workspaces
+    description: Manage branch-scoped work environments.
+    commands:
+      - superset workspaces list
+      - superset workspaces create
+      - superset workspaces delete
+      - superset workspaces open
+  - group: agents
+    description: Configure and launch AI agents.
+    commands:
+      - superset agents list
+      - superset agents create
+  - group: terminals
+    description: Open PTY sessions in workspaces.
+    commands:
+      - superset terminals create
+  - group: tasks
+    description: Track work units.
+    commands:
+      - superset tasks list
+      - superset tasks get
+      - superset tasks create
+      - superset tasks update
+      - superset tasks delete
+      - superset tasks statuses list
+  - group: automations
+    description: Schedule recurring agent tasks.
+    commands:
+      - superset automations list
+      - superset automations create
+      - superset automations update
+      - superset automations run
+      - superset automations logs

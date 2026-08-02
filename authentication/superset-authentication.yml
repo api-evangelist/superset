@@ -1,0 +1,37 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.superset.sh/mcp
+docs: https://docs.superset.sh/cli/cli-reference
+summary:
+  types: [oauth2, openIdConnect, apiKey]
+  api_key_in: [header]
+  oauth2_flows: [authorizationCode, clientCredentials, refreshToken]
+  notes: >-
+    Superset's hosted Agent API (api.superset.sh) authenticates with OAuth 2.1
+    (browser-based authorization code, used for interactive/CLI cross-device
+    login) or API keys for headless/CI use. The CLI signs in via
+    `superset auth login` (OAuth or API key) and stores credentials locally.
+    api.superset.sh publishes RFC 8414 authorization-server metadata and OIDC
+    discovery (see well-known/superset-well-known.yml).
+schemes:
+  - name: OAuth2.1
+    type: oauth2
+    flows: [authorizationCode, clientCredentials, refreshToken]
+    issuer: https://api.superset.sh
+    authorizationUrl: https://api.superset.sh/api/auth/oauth2/authorize
+    tokenUrl: https://api.superset.sh/api/auth/oauth2/token
+    registrationUrl: https://api.superset.sh/api/auth/oauth2/register
+    description: OAuth 2.1 with dynamic client registration; supports authorization_code, client_credentials, refresh_token.
+    scopes: [openid, profile, email, offline_access]
+    sources: [https://docs.superset.sh/mcp, https://api.superset.sh/.well-known/oauth-authorization-server]
+  - name: OpenIDConnect
+    type: openIdConnect
+    openIdConnectUrl: https://api.superset.sh/.well-known/openid-configuration
+    description: OIDC discovery published at api.superset.sh.
+    sources: [https://api.superset.sh/.well-known/openid-configuration]
+  - name: ApiKey
+    type: apiKey
+    in: header
+    key_prefix: sk_live_
+    description: Live API keys for headless/CI environments.
+    sources: [https://docs.superset.sh/mcp]

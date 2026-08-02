@@ -1,0 +1,32 @@
+# Superset
+
+> Superset is an open-source, terminal-first code editor for the AI-agent era. It runs 100+ CLI coding agents (Claude Code, Cursor, OpenCode, Gemini, Copilot, Mistral Vibe) in parallel, each isolated in its own Git worktree. A standalone CLI, a TypeScript SDK, and a hosted MCP server let agents and automation manage workspaces, tasks, terminals, and scheduled automations programmatically. Backed by Y Combinator (Spring 2026).
+
+## APIs
+
+- [Superset Agent API (docs)](https://docs.superset.sh): Hosted REST + MCP surface at api.superset.sh (v2) for workspaces, tasks, agents, terminals, automations, projects, and hosts. Auth via OAuth 2.1 or API keys (sk_live_*).
+- [MCP Server](https://docs.superset.sh/mcp): Hosted HTTP MCP server at https://api.superset.sh/api/v2/agent/mcp.
+
+## Specs & Artifacts
+
+- [MCP manifest](https://raw.githubusercontent.com/api-evangelist/superset/refs/heads/main/mcp/superset-mcp.yml)
+- [Authentication profile](https://raw.githubusercontent.com/api-evangelist/superset/refs/heads/main/authentication/superset-authentication.yml)
+- [CLI command surface](https://raw.githubusercontent.com/api-evangelist/superset/refs/heads/main/cli/superset-cli.yml)
+- [Packages / SDKs](https://raw.githubusercontent.com/api-evangelist/superset/refs/heads/main/packages/superset-packages.yml)
+- [Conventions](https://raw.githubusercontent.com/api-evangelist/superset/refs/heads/main/conventions/superset-conventions.yml)
+- [Lifecycle](https://raw.githubusercontent.com/api-evangelist/superset/refs/heads/main/lifecycle/superset-lifecycle.yml)
+- [Changelog](https://raw.githubusercontent.com/api-evangelist/superset/refs/heads/main/changelog/superset-changelog.yml)
+- [Agent Skills](https://raw.githubusercontent.com/api-evangelist/superset/refs/heads/main/skills/_index.yml)
+
+## Docs
+
+- [Documentation](https://docs.superset.sh)
+- [CLI Reference](https://docs.superset.sh/cli/cli-reference)
+- [TypeScript SDK](https://docs.superset.sh/sdk/reference)
+- [MCP Server](https://docs.superset.sh/mcp)
+- [Changelog](https://superset.sh/changelog)
+- [Pricing](https://superset.sh/pricing)
+- [Status](https://status.superset.sh)
+- [Trust Center](https://trust.superset.sh)
+- [GitHub](https://github.com/superset-sh/superset)
+- [Community (Discord)](https://superset.sh/community)

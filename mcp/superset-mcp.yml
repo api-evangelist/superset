@@ -1,0 +1,49 @@
+generated: '2026-07-21'
+method: searched
+status: published
+source: https://docs.superset.sh/mcp
+server:
+  name: superset
+  transport: http
+  url: https://api.superset.sh/api/v2/agent/mcp
+  install: claude mcp add superset --transport http https://api.superset.sh/api/v2/agent/mcp
+  auth:
+    - method: oauth2.1
+      description: Browser-based OAuth 2.1 for interactive use.
+    - method: api_key
+      description: API keys (format sk_live_*) for headless/CI environments.
+tools:
+  - name: tasks_list
+    description: List tasks with filtering options.
+  - name: tasks_get
+    description: Retrieve a single task.
+  - name: tasks_create
+    description: Create a task.
+  - name: tasks_update
+    description: Update a task.
+  - name: tasks_delete
+    description: Delete a task.
+  - name: workspaces_list
+    description: List branch-scoped git worktrees across hosts.
+  - name: workspaces_create
+    description: Create a branch-scoped git worktree workspace.
+  - name: workspaces_delete
+    description: Delete a workspace.
+  - name: agents_list
+    description: List agent sessions.
+  - name: agents_create
+    description: Launch and configure an agent session.
+  - name: terminals_create
+    description: Spawn a terminal session within a workspace.
+  - name: automations_list
+    description: List scheduled automations.
+  - name: automations_get
+    description: Retrieve a single automation.
+  - name: automations_set_prompt
+    description: Set the prompt for an automation.
+  - name: automations_run
+    description: Run an automation on demand.
+  - name: projects_list
+    description: List checked-out repositories.
+  - name: hosts_list
+    description: View accessible registered machines.

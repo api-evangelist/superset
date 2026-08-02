@@ -1,0 +1,21 @@
+generated: '2026-07-21'
+method: searched
+host: https://api.superset.sh
+documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: superset-oauth-authorization-server.json
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: superset-openid-configuration.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+notes: >-
+  api.superset.sh publishes RFC 8414 OAuth authorization-server metadata and an
+  OpenID Connect discovery document (issuer https://api.superset.sh; grant types
+  authorization_code, client_credentials, refresh_token; scopes openid, profile,
+  email, offline_access). No security.txt or API catalog published.

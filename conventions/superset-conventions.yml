@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.superset.sh/cli/cli-reference
+authentication:
+  style: OAuth 2.1 (authorization code) or API key (sk_live_*)
+  ref: authentication/superset-authentication.yml
+versioning:
+  style: uri-path
+  current: v2
+  base: https://api.superset.sh/api/v2
+  ref: lifecycle/superset-lifecycle.yml
+output_formats:
+  description: >-
+    CLI and API surface support structured output. CLI flags: --json (raw
+    structured data), --quiet (IDs only, one per line), default human-readable
+    tables.
+filtering:
+  description: >-
+    List operations (tasks, workspaces, automations) accept filtering options
+    (e.g. by team, status, project) rather than a documented cursor/offset
+    pagination scheme.
+idempotency:
+  supported: false
+  notes: No idempotency-key header/parameter documented.
+error_envelope:
+  documented: false
+  notes: No public error-code registry or RFC 9457 problem+json envelope documented for the hosted Agent API.
+resources:
+  description: >-
+    Core resource families exposed via CLI + MCP + SDK: tasks, workspaces,
+    agents, terminals, automations, projects, hosts, organizations.

@@ -1,0 +1,21 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.superset.sh
+versioning:
+  scheme: uri-path
+  current: v2
+  docs: https://docs.superset.sh/mcp
+  notes: >-
+    Hosted Agent API is served under /api/v2 (api.superset.sh). The desktop app
+    shipped a v2 rebuild in April 2026 with a direct migration path from v1
+    project data.
+status_page: https://status.superset.sh
+trust_center: https://trust.superset.sh
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: >-
+    No formal deprecation/Sunset-header policy published. v1 to v2 was handled
+    as a one-time migration with data preserved, not a documented deprecation
+    schedule.
+deprecated_operations: []

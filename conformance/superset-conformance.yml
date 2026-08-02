@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.superset.sh/mcp
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: Hosted Agent API documents OAuth 2.1 (authorization code) authentication.
+  - id: mcp
+    conforms: true
+    evidence: Published hosted MCP server at api.superset.sh/api/v2/agent/mcp (HTTP transport).
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No application/problem+json error envelope documented.
+  - id: rfc8594-sunset
+    conforms: false
+    evidence: No Sunset/Deprecation header policy published.

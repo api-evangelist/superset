@@ -1,0 +1,46 @@
+generated: '2026-07-21'
+method: searched
+source: https://superset.sh/changelog
+scheme: dated-releases
+current_version: v2
+entries:
+  - date: '2026-07-19'
+    title: 'Performance: Lighter Memory and Smoother Under Heavy Load'
+    breaking: false
+    highlights:
+      - Renderer memory down 26% (1,127 to 838 MB); JS heap down 51% (581 to 286 MB).
+      - UI thread stalls cut to one-third; idle-terminal port detection scans every 30s (was 2.5s), ~15x less background CPU.
+  - date: '2026-07-12'
+    title: 'Rich Input for Terminal, Ghostty-Speed Scrolling, and Mistral Vibe'
+    breaking: false
+    highlights:
+      - Rich text editor overlay for terminal input with multiline prompts and file mentions.
+      - Terminal scrolling matches Ghostty speeds; Mistral Vibe added as first-class agent with model picker.
+      - Wake-on-LAN for offline hosts, Sydney relay region, Linear task filtering.
+  - date: '2026-07-06'
+    title: 'Custom Terminal Agents, Redesigned Workspace Activity Strip, and Fable 5'
+    breaking: false
+    highlights:
+      - Register custom terminal agents alongside built-ins; Fable 5 model with reasoning-effort selection.
+      - Workspace activity strip shows running agents and forwarded ports inline; macOS dock attention badge.
+  - date: '2026-05-18'
+    title: 'Automations, CLI, and Slack Bot'
+    breaking: false
+    highlights:
+      - Automations schedule agent runs as cron jobs with prompt version history and team filtering.
+      - Standalone CLI ships as a static binary with project/workspace commands.
+      - Slack bot gains workspace creation and task management; mobile app in internal review.
+  - date: '2026-04-27'
+    title: 'Superset 2.0 Open Beta'
+    breaking: true
+    highlights:
+      - Major architectural rebuild; remote workspaces on any network-connected device.
+      - Reimagined diff viewer with infinite scroll; rebuilt IDE-like pane system; standalone CLI with cross-device OAuth login.
+      - Direct migration path from v1 projects preserves existing workspace data.
+  - date: '2026-04-20'
+    title: 'Chat UX Overhaul, v2 Early Access, Brand Refresh'
+    breaking: false
+    highlights:
+      - Chat interface redesigned with Tiptap rich-text editor, slash-command chips, file mentions.
+      - v2 workspace early access with full pane layout, GitHub-style diff viewer, file editor, browser pane.
+      - GitHub integration made free across all plans.

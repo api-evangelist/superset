@@ -1,0 +1,18 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/superset-sh/superset
+packages:
+  - language: typescript
+    registry: npm
+    name: "@superset_sh/sdk"
+    url: https://www.npmjs.com/package/@superset_sh/sdk
+    install: npm install @superset_sh/sdk
+    official: true
+    description: TypeScript SDK for programmatic control of Superset workspaces, agents, tasks, and automations.
+  - language: shell
+    registry: homebrew
+    name: superset-sh/tap/superset
+    url: https://github.com/superset-sh/homebrew-tap
+    install: brew install superset-sh/tap/superset
+    official: true
+    description: Superset CLI distributed via a first-party Homebrew tap (also installable via curl -fsSL https://superset.sh/cli/install.sh | sh).

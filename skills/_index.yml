@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: generated
+source: mcp/superset-mcp.yml
+skills:
+  - file: superset-create-workspace-and-run-agent.md
+    name: Create a workspace and run an agent
+    api: mcp/superset-mcp.yml
+    operations: [hosts_list, projects_list, workspaces_create, agents_create, terminals_create]
+  - file: superset-schedule-automation.md
+    name: Schedule and run an automation
+    api: mcp/superset-mcp.yml
+    operations: [automations_list, automations_get, automations_set_prompt, automations_run]
+  - file: superset-manage-tasks.md
+    name: Create and track tasks
+    api: mcp/superset-mcp.yml
+    operations: [tasks_create, tasks_list, tasks_get, tasks_update, tasks_delete]

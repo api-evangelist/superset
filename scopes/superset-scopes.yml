@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://api.superset.sh/.well-known/oauth-authorization-server
+docs: https://docs.superset.sh/mcp
+schemes:
+  - name: OAuth2.1
+    source: https://api.superset.sh/.well-known/oauth-authorization-server
+    issuer: https://api.superset.sh
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://api.superset.sh/api/auth/oauth2/authorize
+        tokenUrl: https://api.superset.sh/api/auth/oauth2/token
+scopes:
+  - scope: openid
+    description: OpenID Connect authentication.
+    sources: [https://api.superset.sh/.well-known/oauth-authorization-server]
+  - scope: profile
+    description: Access to the user's basic profile.
+    sources: [https://api.superset.sh/.well-known/oauth-authorization-server]
+  - scope: email
+    description: Access to the user's email address.
+    sources: [https://api.superset.sh/.well-known/oauth-authorization-server]
+  - scope: offline_access
+    description: Issue a refresh token for offline/long-lived access.
+    sources: [https://api.superset.sh/.well-known/oauth-authorization-server]
