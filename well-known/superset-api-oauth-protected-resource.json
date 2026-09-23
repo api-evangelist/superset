@@ -1,0 +1,1 @@
+{"resource":"https://api.superset.sh/api/v2/agent/mcp","authorization_servers":["https://api.superset.sh"],"scopes_supported":["openid","profile","email","offline_access"],"resource_name":"Superset MCP Server","resource_documentation":"https://superset.sh/auth.md"}
