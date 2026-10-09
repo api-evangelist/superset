@@ -54,3 +54,21 @@ deployment:
   probe: gated
   checked: '2026-08-12'
   source: catalog MCP census
+rfc9728:
+  endpoint: https://api.superset.sh/api/v2/agent/mcp
+  metadata_url: https://api.superset.sh/.well-known/oauth-protected-resource/mcp
+  discovered_via: WWW-Authenticate resource_metadata on an anonymous POST initialize
+  fetched: '2026-09-25'
+  http_status: 200
+  content_type: application/json
+  document:
+    resource: https://api.superset.sh/mcp
+    authorization_servers:
+    - https://api.superset.sh
+    scopes_supported:
+    - openid
+    - profile
+    - email
+    - offline_access
+    resource_name: Superset MCP Server
+    resource_documentation: https://superset.sh/auth.md
